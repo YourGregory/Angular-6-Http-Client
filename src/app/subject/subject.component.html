@@ -1,0 +1,4 @@
+<h5>All Subjects </h5>
+<div *ngFor="let subj of subjects">
+  <a [routerLink]="['/subject', subj.id]" style="color:black"><span class="badge badge-dark">{{subj.id}}</span> -> {{subj.name}} </a>
+</div>

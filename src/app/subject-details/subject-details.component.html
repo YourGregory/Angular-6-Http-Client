@@ -1,0 +1,47 @@
+<h4><span class="badge badge-light ">{{subject.id}}</span> -> {{subject.name}}</h4>
+<div [hidden]="submitted">
+  <form #detailSubjectForm="ngForm">
+    <div class="form-group">
+      <label for="name">Subject Name</label>
+      <input type="text" class="form-control" id="name" required
+             [(ngModel)]="subject.name" name="name" #name="ngModel">
+      <div [hidden]="name.valid || name.pristine"
+           class="alert alert-danger">
+        First Name is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="teacherSurname">Teachers Surname</label>
+      <input type="text" class="form-control" id="teacherSurname" required
+             [(ngModel)]="subject.teacherSurname" name="teacherSurname" #teacherSurname="ngModel">
+      <div [hidden]="teacherSurname.valid || teacherSurname.pristine"
+           class="alert alert-danger">
+        Last Name is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="hours">Hours</label>
+      <input type="hours" class="form-control" id="hours" required
+             [(ngModel)]="subject.hours" name="hours" #hours="ngModel">
+      <div [hidden]="hours.valid || hours.pristine"
+           class="alert alert-danger">
+        Age is required
+      </div>
+    </div>
+
+    <div class="btn-group btn-group-sm">
+      <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+      <button type="button" class="btn btn-dark" (click)="update()" [disabled]="!detailSubjectForm.form.valid">Update</button>
+      <button type="button" class="btn btn-dark" (click)="delete()">Delete</button>
+    </div>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <p>{{message}}</p>
+  <div class="btn-group btn-group-sm">
+    <button type="button" class="btn btn-dark" (click)="goBack()">Back</button>
+  </div>
+</div>

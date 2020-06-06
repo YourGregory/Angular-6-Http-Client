@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <h1>Lab Work 5</h1>
+      <ul>
+        <li>
+          <a routerLink="group" routerLinkActive="active">Group</a>
+        </li>
+        <li>
+          <a routerLink="subject" routerLinkActive="active">Subject</a>
+        </li>
+        <li>
+          <a routerLink="student" routerLinkActive="active">Student</a>
+        </li>
+      </ul>
+      <ul class="nav justify-content-center">
+          <li class="nav-item">
+              <a routerLink="student" class="btn btn-light btn-sm" role="button" routerLinkActive="active">Retrieve</a>
+          </li>
+          <li class="nav-item">
+              <a routerLink="student/add" class="btn btn-light btn-sm" role="button" routerLinkActive="active">Create</a>
+          </li>
+      </ul>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a routerLink="group" class="btn btn-light btn-sm" role="button" routerLinkActive="active">Retrieve Groups</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="group/add" class="btn btn-light btn-sm" role="button" routerLinkActive="active">Create Group</a>
+        </li>
+      </ul>
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a routerLink="subject" class="btn btn-light btn-sm" role="button" routerLinkActive="active">Retrieve Subject</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="subject/add" class="btn btn-light btn-sm" role="button" routerLinkActive="active">Create Subject</a>
+        </li>
+      </ul>
+      <hr>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

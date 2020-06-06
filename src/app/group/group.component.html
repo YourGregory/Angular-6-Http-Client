@@ -1,0 +1,4 @@
+<h5> All Groups </h5>
+<div *ngFor="let group of groups">
+  <a [routerLink]="['/group', group.id]" style="color:black"><span class="badge badge-dark">{{group.id}}</span> -> {{group.name}}</a>
+</div>
